@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import "./styles.css";
 class Header extends Component {
+  state = {
+    value: 0,
+  };
+
+  increment = () => {
+    this.setState((state, props) => ({
+      value: state.value + 1,
+    }));
+  };
   render() {
     return (
       <div>
@@ -9,7 +18,9 @@ class Header extends Component {
           <nav>
             <ul>
               <li>
-                <a href="#">Increment</a>
+                <a href="#" onClick={this.increment}>
+                  Increment
+                </a>
               </li>
               <li>
                 <a href="#">Decrement</a>
