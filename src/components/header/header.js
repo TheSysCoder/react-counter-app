@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import Card from "../card/card";
 import "./styles.css";
+
 class Header extends Component {
   state = {
     value: 0,
@@ -28,6 +30,7 @@ class Header extends Component {
             </ul>
           </nav>
         </header>
+        <Card value={this.state.value} />
       </div>
     );
   }
